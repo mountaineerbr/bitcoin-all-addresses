@@ -34,7 +34,7 @@ ls -1v "$DIRIN"/*.tsv.gz | xargs -- gunzip -vc | cut -f7 \
 #files=( "$DIROUT"/[a-z][a-z][a-z] )
 #IFS=$' \t\n'
 #
-#uni=$(wc -l "${files[@]}" | sum) uni=$((uni-1))  #remove one header value (`recipient`)
+#uni=$(wc -l "${files[@]}" | awk 'END{ print $1 - 1 }')  #mind one header value (`recipient`)
 #a1=$(grep -hc '^1' "${files[@]}" | sum)
 #a3=$(grep -hc '^3' "${files[@]}" | sum)
 #bc=$(grep -hc '^bc1' "${files[@]}" | sum)
