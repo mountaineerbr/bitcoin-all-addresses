@@ -53,7 +53,7 @@ __unique addresses with -__|  16899899
 
 Addresses with - in Blockchair dumps are unspendable and usually encode data.
 
-† In one occasion, the lists were generated with a bad file
+† At one occasion, lists were generated with a bad file
 `blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
 and lacked about half a single day worth of addresses.
 
