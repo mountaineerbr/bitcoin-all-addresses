@@ -26,8 +26,7 @@ ls -1v "$DIRIN"/*.tsv.gz | xargs -- gunzip -vc | cut -f7 \
 
 
 ##extra functions
-
-#produce address stats
+##produce address stats
 #IFS=$'\t\n'  #mind blank spaces in file paths
 #files=( "$DIROUT"/[a-z][a-z][a-z] )
 #IFS=$' \t\n'
