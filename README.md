@@ -10,6 +10,10 @@ they first appeared in Blockchair dumps.
 
 ## Statistics
 
+![Address types change over time](chart1.png)
+
+![Unique address type percentages over time](chart2.png)
+
 ### 2020-07-18
 
 TYPE            | MATCHES
@@ -47,10 +51,6 @@ __unique addresses 1*__|     542375558
 __unique addresses 3*__ |    255864869
 __unique addresses bc1*__|    74111219
 __unique addresses with -__|  16899899
-
-
-![Address types change over time](chart1.png)
-![Unique address type percentages over time](chart2.png)
 
 ---
 
