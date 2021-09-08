@@ -10,7 +10,7 @@ they first appeared in Blockchair dumps.
 
 ## Statistics
 
-### Stats 2020-07-18†
+### Stats 2020-07-18
 
 TYPE            | MATCHES
 :---------------|---------------:
@@ -32,6 +32,11 @@ __unique addresses 3*__ |    208054134
 __unique addresses bc1*__|    50366868
 __unique addresses with -__|  15893193
 
+† Generated with a bad copy of
+`blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
+and lacked about half a single day worth of addresses.
+
+
 ### Stats 2021-09-06
 
 TYPE            | MATCHES
@@ -42,25 +47,6 @@ __unique addresses 1*__|     542375558
 __unique addresses 3*__ |    255864869
 __unique addresses bc1*__|    74111219
 __unique addresses with -__|  16899899
-
-
-### Notes
-
-[Dump files from blockchair](https://gz.blockchair.com/bitcoin/outputs/).
-
-[Checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-addresses/blob/master/cksum.blockchair.outputs.txt).
-
-Blockchair dumps contain a header and the 7th field is `recipient`.
-
-Addresses starting with - in Blockchair dumps are unspendable and usually encode data.
-
-† Former versions of this list were generated with a bad copy of
-`blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
-and lacked about half a single day worth of addresses.
-
-This repo had to be re-uploaded to GitHub.
-
-_Thank you, Blockchair team and loyceV!_
 
 ---
 
@@ -78,13 +64,13 @@ See script
 #### 1.3. Also test .tsv.gz files
 
 ```bash
-gunzip -t \*.tsv.gz
+gunzip -t *.tsv.gz
 ```
 
 ### 2. Uncompress files, cut the 7th field (recipient) and number lines
 
 ```bash
-gunzip -vc \*.tsv.gz | cut -d$'\t' -f7 | nl >file_step2.txt
+gunzip -vc *.tsv.gz | cut -d$'\t' -f7 | nl > file_step2.txt
 ```
 
 ### 3. Sort and output unique addresses only and resort in the original order
@@ -119,6 +105,28 @@ for more code tips.
 
 ---
 
+### Notes
+
+[Dump files from blockchair](https://gz.blockchair.com/bitcoin/outputs/).
+
+[Checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-addresses/blob/master/cksum.blockchair.outputs.txt).
+
+Blockchair dumps contain a header and the 7th field is `recipient`.
+
+Addresses starting with - in Blockchair dumps are unspendable and usually encode data.
+
+This repo had to be re-uploaded to GitHub.
+
+_Thank you, Blockchair team and loyceV!_
+
+## See Also
+
+loyceV address lists, which should be updated often (but his lists are not chronological):
+
+List of all Bitcoin addresses ever used -- https://bitcointalk.org/index.php?topic=5265993.0
+
+List of all Bitcoin addresses with a balance -- https://bitcointalk.org/index.php?topic=5254914.0
+
 ## References
 
 Original topic in Bitcointalk that led to this repo -- https://bitcointalk.org/index.php?topic=5259621.0
@@ -132,15 +140,6 @@ https://gz.blockchair.com/bitcoin/
 http://addresses.loyce.club/?C=M;O=D
 
 http://loyceipv6.tk:20319/blockdata
-
-## See Also
-
-loyceV address lists, which should be updated often (but his lists are not chronological):
-
-List of all Bitcoin addresses ever used -- https://bitcointalk.org/index.php?topic=5265993.0
-
-List of all Bitcoin addresses with a balance -- https://bitcointalk.org/index.php?topic=5254914.0
-
 
 ## Blockchair Output Dump Example
 
