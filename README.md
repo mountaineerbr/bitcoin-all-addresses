@@ -8,6 +8,9 @@ totalling approximately 29.6G of plain text.
 One feature of these lists is addresses are kept in the same order
 they first appeared in Blockchair dumps.
 
+Here are the links for [Blockchair dump files](https://gz.blockchair.com/bitcoin/outputs/)
+and my [checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-addresses/blob/master/cksum.blockchair.outputs.txt).
+
 ## Statistics
 
 ![Address types change over time](chart1.png)
@@ -36,11 +39,6 @@ __unique addresses 3*__ |    208054134
 __unique addresses bc1*__|    50366868
 __unique addresses with -__|  15893193
 
-† Generated with a bad copy of
-`blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
-and lacked about half a single day worth of addresses.
-
-
 ### 2021-09-06
 
 TYPE            | MATCHES
@@ -51,6 +49,13 @@ __unique addresses 1*__|     542375558
 __unique addresses 3*__ |    255864869
 __unique addresses bc1*__|    74111219
 __unique addresses with -__|  16899899
+
+
+Addresses with - in Blockchair dumps are unspendable and usually encode data.
+
+† In one occasion, the lists were generated with a bad file
+`blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
+and lacked about half a single day worth of addresses.
 
 ---
 
@@ -111,13 +116,7 @@ for more code tips.
 
 ## Notes
 
-[Dump files from blockchair](https://gz.blockchair.com/bitcoin/outputs/).
-
-[Checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-addresses/blob/master/cksum.blockchair.outputs.txt).
-
 Blockchair dumps contain a header and the 7th field is `recipient`.
-
-Addresses starting with - in Blockchair dumps are unspendable and usually encode data.
 
 This repo had to be re-uploaded to GitHub.
 
