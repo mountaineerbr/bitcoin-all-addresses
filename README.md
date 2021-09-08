@@ -79,7 +79,7 @@ gunzip -t *.tsv.gz
 ### 2. Uncompress files, cut the 7th field (recipient) and number lines
 
 ```bash
-gunzip -vc *.tsv.gz | cut -f7 | nl > file_step2.txt
+gunzip -c *.tsv.gz | cut -f7 | nl > file_step2.txt
 ```
 
 ### 3. Sort and output unique addresses only and resort in the original order
@@ -91,7 +91,7 @@ Tip: set large temporary directory for buffers and LC_ALL and LANG to C
 export TMPDIR=/some/large/tmpdir
 export LC_ALL=C LANG=C
 
-sort -k2 -u file_step2.txt | sort -n concatnl.uniq.txt | cut -f2 > final.txt
+sort -k2 -u file_step2.txt | sort -n | cut -f2 > final.txt
 ```
 
 ### 4. Split resulting file at about 94MB to upload to github
