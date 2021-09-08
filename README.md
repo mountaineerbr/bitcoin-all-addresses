@@ -70,7 +70,7 @@ gunzip -t *.tsv.gz
 ### 2. Uncompress files, cut the 7th field (recipient) and number lines
 
 ```bash
-gunzip -vc *.tsv.gz | cut -d$'\t' -f7 | nl > file_step2.txt
+gunzip -vc *.tsv.gz | cut -f7 | nl > file_step2.txt
 ```
 
 ### 3. Sort and output unique addresses only and resort in the original order

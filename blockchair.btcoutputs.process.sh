@@ -32,10 +32,10 @@ ls -1v "$DIRIN"/*.tsv.gz | xargs -- gunzip -vc | cut -f7 \
 #IFS=$' \t\n'
 #
 #uni=$(cat "${files[@]}" | wc -l) uni=$((uni-1)) #mind one header value (`recipient`)
-#a1=$(cat "${files[@]}" | grep -hc '^1')
-#a3=$(cat "${files[@]}" | grep -hc '^3')
-#bc=$(cat "${files[@]}" | grep -hc '^bc1')
-#nn=$(cat "${files[@]}" | grep -hcF '-')
+#a1=$(cat "${files[@]}" | grep -c '^1')
+#a3=$(cat "${files[@]}" | grep -c '^3')
+#bc=$(cat "${files[@]}" | grep -c '^bc1')
+#nn=$(cat "${files[@]}" | grep -cF '-')
 #
 #echo "unique: $uni
 #1*: $a1
