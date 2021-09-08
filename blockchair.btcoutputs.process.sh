@@ -26,19 +26,17 @@ ls -1v "$DIRIN"/*.tsv.gz | xargs -- gunzip -vc | cut -f7 \
 
 
 ##extra functions
-##sum first column
-#sum() { awk '{sum += $1} END {print sum}' ;}
 
-##produce address stats
+#produce address stats
 #IFS=$'\t\n'  #mind blank spaces in file paths
 #files=( "$DIROUT"/[a-z][a-z][a-z] )
 #IFS=$' \t\n'
 #
-#uni=$(wc -l "${files[@]}" | awk 'END{ print $1 - 1 }')  #mind one header value (`recipient`)
-#a1=$(grep -hc '^1' "${files[@]}" | sum)
-#a3=$(grep -hc '^3' "${files[@]}" | sum)
-#bc=$(grep -hc '^bc1' "${files[@]}" | sum)
-#nn=$(grep -hcF '-' "${files[@]}" | sum)
+#uni=$(cat "${files[@]}" | wc -l) uni=$((uni-1)) #mind one header value (`recipient`)
+#a1=$(cat "${files[@]}" | grep -hc '^1')
+#a3=$(cat "${files[@]}" | grep -hc '^3')
+#bc=$(cat "${files[@]}" | grep -hc '^bc1')
+#nn=$(cat "${files[@]}" | grep -hcF '-')
 #
 #echo "unique: $uni
 #1*: $a1
