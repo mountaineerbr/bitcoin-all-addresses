@@ -10,7 +10,7 @@ they first appeared in Blockchair dumps.
 
 ## Statistics
 
-### Stats 2020-07-18
+### 2020-07-18
 
 TYPE            | MATCHES
 :---------------|---------------:
@@ -21,7 +21,7 @@ __unique addresses 3*__ |    167765027
 __unique addresses bc1*__|    39094520
 __unique addresses with -__|  15150132 
 
-### Stats 2021-01-17†
+### 2021-01-17†
 
 TYPE            | MATCHES
 :---------------|---------------:
@@ -37,7 +37,7 @@ __unique addresses with -__|  15893193
 and lacked about half a single day worth of addresses.
 
 
-### Stats 2021-09-06
+### 2021-09-06
 
 TYPE            | MATCHES
 :---------------|---------------:
@@ -105,7 +105,7 @@ for more code tips.
 
 ---
 
-### Notes
+## Notes
 
 [Dump files from blockchair](https://gz.blockchair.com/bitcoin/outputs/).
 
