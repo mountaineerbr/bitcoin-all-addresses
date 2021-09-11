@@ -29,9 +29,10 @@ LOGERR="$DIR/00.log.err.txt"
 #download urls
 URL='https://gz.blockchair.com/bitcoin/outputs'
 
-#lift the limits
-#blockchair api key
-#KEY=""
+#blockchair api key, lift the limits
+#add interrogation mark `?' in front of key
+#KEY="?APIKEY"
+
 
 #script name
 SN="${0##*/}"
@@ -164,15 +165,13 @@ fi
 #check if destination dir exists
 [[ -d "$DIR" ]] || mkdir -pv "$DIR" || exit 1
 
-#is there a list file already?
 echo '>>>checking/generating a list of files to download..' >&2
 if [[ -e "$FILELIST" ]]
 then
-	#load files from filelist
+	#load existing filelist
 	FILES=( $( reversef < "$FILELIST" ) )
 else
-	#download and load filelist
-	#make a new copy of it at result $DIR
+	#download and load filelist, copy it to result $DIR
 	FILES=( $( "${YOURAPP[@]}" "$OUTFLAG" - "$URL" | sed 's/<[^>]*>//g' | grep -Eo 'blockchair_bitcoin_outputs[^ ]+' | tee "$FILELIST" | reversef ) )
 	CURLEXIT="${PIPESTATUS[0]:-${pipestatus[1]}}"
 fi
@@ -182,8 +181,8 @@ if (( CURLEXIT ))
 then
 	echo "error: curl/wget" >&2
 	exit $CURLEXIT
-#files array empty?
-elif [[ -z "${FILES[*]}" ]]
+#empty file array?
+elif ((${#FILES[@]}==0))
 then
 	mv -v "$FILELIST" "${FILELIST}.empty"
 	echo "error: empty filelist" >&2
@@ -191,13 +190,7 @@ then
 fi
 
 #line count
-WCL="$( wc -l < "$FILELIST" )"
-
-#set api key parameter
-if [[ -n "$KEY" ]] && [[ "$URL" = *blockchair.com* ]]
-then KEY="?$KEY"
-else unset KEY
-fi
+WCL=$(wc -l < "$FILELIST")
 
 #traps
 trap trapf INT TERM
@@ -251,7 +244,7 @@ fi
 
 
 exit
-#START OF FILELIST EXAMPLE BELOW#
+#EXAMPLE OF FISRT LINES OF FILELIST#
 blockchair_bitcoin_outputs_20090103.tsv.gz
 blockchair_bitcoin_outputs_20090109.tsv.gz
 blockchair_bitcoin_outputs_20090110.tsv.gz
