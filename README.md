@@ -11,44 +11,25 @@ they first appeared in Blockchair dumps.
 Here are the links for [Blockchair dump files](https://gz.blockchair.com/bitcoin/outputs/)
 and my [checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-addresses/blob/master/cksum.blockchair.outputs.txt).
 
+
 ## Statistics
+
+### Charts
 
 ![Address types change over time](chart1.png)
 
 ![Unique address type percentages over time](chart2.png)
 
-### 2020-07-18
+### Tables
 
-TYPE            | MATCHES
-:---------------|---------------:
-__addresses total__ |       1483853800
-__unique addresses total__|  692773144
-__unique addresses 1*__|     470763465
-__unique addresses 3*__ |    167765027
-__unique addresses bc1*__|    39094520
-__unique addresses with -__|  15150132 
-
-### 2021-01-17†
-
-TYPE            | MATCHES
-:---------------|---------------:
-__addresses total__|        1652542603
-__unique addresses total__|  784345877
-__unique addresses 1*__|     510031682
-__unique addresses 3*__ |    208054134
-__unique addresses bc1*__|    50366868
-__unique addresses with -__|  15893193
-
-### 2021-09-06
-
-TYPE            | MATCHES
-:---------------|---------------:
-__addresses total__|        1878107037
-__unique addresses total__|  889251545
-__unique addresses 1*__|     542375558
-__unique addresses 3*__ |    255864869
-__unique addresses bc1*__|    74111219
-__unique addresses with -__|  16899899
+           TYPE |           2020-07-18 | 2021-01-17† | 2021-09-06
+:---------------|----------------------:-------------|------------:
+__addresses total__ |       1483853800 |  1652542603 | 1878107037
+__unique addresses total__|  692773144 |   784345877 |  889251545
+__unique addresses 1*__|     470763465 |   510031682 |  542375558
+__unique addresses 3*__ |    167765027 |   208054134 |  255864869
+__unique addresses bc1*__|    39094520 |    50366868 |   74111219
+__unique addresses with -__|  15150132 |    15893193 |   16899899
 
 
 Addresses with - in Blockchair dumps are unspendable and usually encode data.
@@ -57,7 +38,6 @@ Addresses with - in Blockchair dumps are unspendable and usually encode data.
 `blockchair_bitcoin_outputs_20201205.tsv.gz` (37351424 vs 66416920 bytes)
 and lacked about half a single day worth of addresses.
 
----
 
 ## Methodology
 
@@ -109,10 +89,11 @@ for more code tips.
 ---
 
 	Please consider sending me a nickle!  =)
-  
+
 		bc1qlxm5dfjl58whg6tvtszg5pfna9mn2cr2nulnjr
 
 ---
+
 
 ## Notes
 
@@ -122,6 +103,7 @@ This repo had to be re-uploaded to GitHub.
 
 _Thank you, Blockchair team and loyceV!_
 
+
 ## See Also
 
 loyceV address lists, which should be updated often (but his lists are not chronological):
@@ -129,6 +111,7 @@ loyceV address lists, which should be updated often (but his lists are not chron
 List of all Bitcoin addresses ever used -- https://bitcointalk.org/index.php?topic=5265993.0
 
 List of all Bitcoin addresses with a balance -- https://bitcointalk.org/index.php?topic=5254914.0
+
 
 ## References
 
@@ -143,6 +126,7 @@ https://gz.blockchair.com/bitcoin/
 http://addresses.loyce.club/?C=M;O=D
 
 http://loyceipv6.tk:20319/blockdata
+
 
 ## Blockchair Output Dump Example
 
