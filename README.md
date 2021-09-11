@@ -22,7 +22,7 @@ and my [checksum of dump files](https://github.com/mountaineerbr/bitcoin-all-add
 
 ### Tables
 
-TYPE            |           2020-07-18 | 2021-01-17† | 2021-09-06
+TYPE \\ DATE    |           2020-07-18 | 2021-01-17† | 2021-09-06
 :---------------|---------------------:|------------:|-----------:
 __addresses total__ |       1483853800 |  1652542603 | 1878107037
 __unique addresses total__|  692773144 |   784345877 |  889251545
